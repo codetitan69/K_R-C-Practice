@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+double Convert_to_celcius(double farenheit);  // protype so we dont get implicit declaration error
+
 int main(){
     float fahr,celcius;
     float upper,lower,step;
@@ -14,7 +16,7 @@ int main(){
 
     while (fahr <= upper)
     {
-        celcius = 5.0/9.0 * (fahr - 32.0);
+        celcius = Convert_to_celcius(fahr);
 
         printf("%9.0f  -  %7.2f\n",fahr,celcius);
 
@@ -22,3 +24,8 @@ int main(){
     }
     
 }
+
+double Convert_to_celcius(double farenheit){
+    return 5.0/9.0 * (farenheit - 32.0);
+}
+// 1.15 use a func fot temp prog

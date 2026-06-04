@@ -2,7 +2,7 @@
 #define MAX_LINE_LENGTH 1000
 
 int main(){
-        char longest_line[MAX_LINE_LENGTH];
+    char longest_line[MAX_LINE_LENGTH];
     char buffer[MAX_LINE_LENGTH];
 
     int l_line_len = 0;
@@ -16,8 +16,8 @@ int main(){
         longest_line[i] = 0;
         buffer[i] = 0;
     }
-    longest_line[MAX_LINE_LENGTH - 1] = '\0';
-    buffer[MAX_LINE_LENGTH - 1] = '\0';
+    // longest_line[MAX_LINE_LENGTH - 1] = '\0';
+    // buffer[MAX_LINE_LENGTH - 1] = '\0';       *** so apprently this isnt the correct use this, its supposed to be at the end of characters not at the end of array, and in this particular program there is no need for it, since im not using any str library funcs or printf
     
 
     while ((c = getchar()) != '~'){
